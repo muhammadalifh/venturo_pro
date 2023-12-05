@@ -14,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+
+// Route::get('/get_tahun', [App\Http\Controllers\TahunController::class, 'get_tahun'])->name('get_tahun');
+
+Route::get('/menu-list', \App\Http\Controllers\Api\MenuListController::class)->name('menu-list');
+Route::get('/transaction-list', \App\Http\Controllers\Api\TransactionListController::class)->name('transaction-list');

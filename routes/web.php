@@ -20,3 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('example', [App\Http\Controllers\HomeController::class, 'example'])->name('example');
+Route::get('tahun', [App\Http\Controllers\TahunController::class, 'index'])->name('tahun');
+Route::get('/get_tahun', [App\Http\Controllers\TahunController::class, 'get_tahun'])->name('get_tahun');
+Route::get('/menu', [App\Http\Controllers\MenuController::class, 'index'])->name('menu');
+Route::get('/get_2021', [App\Http\Controllers\MenuController::class, 'get_2021'])->name('get_2021');
